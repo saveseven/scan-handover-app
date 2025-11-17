@@ -1,0 +1,113 @@
+/* Force focus on input */
+.force-focus {
+  background-color: #ffffcc !important;
+  border: 2px solid #007bff !important;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5) !important;
+}
+
+/* Duplicate row styling */
+.duplicate-row {
+  background-color: #fff3cd !important;
+  border-left: 4px solid #ffc107;
+}
+
+.duplicate-row td {
+  background-color: inherit !important;
+}
+
+.duplicate-badge {
+  background: #dc3545;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
+/* Destination cell colors */
+.destination-cell {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Duplicate toggle */
+.duplicate-toggle {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-badge {
+  background: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Action buttons */
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+.btn-export, .btn-refresh, .btn-apply {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn-export:hover, .btn-refresh:hover, .btn-apply:hover {
+  background: #218838;
+}
+
+/* Status colors */
+.final-status-true { background-color: #28a745; color: white; }
+.final-status-pending { background-color: #ffc107; color: black; }
+.final-status-overscanned { background-color: #e83e8c; color: white; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .filter-area {
+    flex-direction: column;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .scan-table {
+    min-width: 1000px;
+  }
+}
+
+/* Auto-focus animation */
+@keyframes pulse-focus {
+  0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+.force-focus:focus {
+  animation: pulse-focus 2s infinite;
+}
